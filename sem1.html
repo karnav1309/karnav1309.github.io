@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sem 1 — Computer Engineering | GTU Sem-1 Hub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --cream:#F3EEE4;
+  --paper:#FBF8F2;
+  --ink:#1A1A1A;
+  --ink-soft:#5C5850;
+  --line:#DFD8C8;
+  --coral:#E8654A;
+  --peach:#F0C793;
+  --lavender:#B9AEE0;
+  --mustard:#E3B23C;
+  --sage:#9FB08F;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.5;
+}
+h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.02em;color:var(--ink);}
+.mono{font-family:'Inter',sans-serif;letter-spacing:0.03em;text-transform:uppercase;font-size:0.72rem;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+
+/* ===== NAV ===== */
+header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 6vw;
+  background:var(--cream);
+  flex-wrap:wrap;gap:14px;
+}
+.logo{
+  display:flex;align-items:center;gap:8px;font-size:1.15rem;font-weight:700;
+  background:var(--paper);border-radius:30px;padding:10px 18px;
+  border:1px solid var(--line);
+}
+.logo-mark{width:9px;height:9px;border-radius:50%;background:var(--coral);}
+nav ul{
+  display:flex;gap:4px;list-style:none;flex-wrap:wrap;
+  background:var(--paper);border-radius:30px;padding:6px;border:1px solid var(--line);
+}
+nav a{font-size:0.85rem;color:var(--ink-soft);padding:9px 16px;border-radius:20px;transition:all .2s;}
+nav a:hover{color:var(--ink);}
+nav a.current{background:var(--ink);color:var(--paper);}
+.nav-cta{
+  background:var(--ink);color:var(--paper);
+  padding:11px 20px;border-radius:30px;font-size:0.85rem;font-weight:600;
+  transition:transform .15s;white-space:nowrap;
+}
+.nav-cta:hover{transform:translateY(-2px);}
+
+/* ===== SECTION SHELL ===== */
+section,main{padding:6vh 6vw;max-width:1300px;margin:0 auto;}
+.section-head{margin-bottom:36px;max-width:60ch;}
+.section-tag{color:var(--coral);margin-bottom:14px;font-weight:600;}
+.section-head h1,.section-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:14px;line-height:1.08;}
+.section-head p{color:var(--ink-soft);font-size:1rem;}
+
+.btn-primary{
+  display:inline-block;background:var(--ink);color:var(--paper);
+  padding:14px 26px;border-radius:30px;font-weight:600;font-size:0.92rem;
+  border:none;transition:transform .15s;
+}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-ghost{
+  display:inline-block;border:1.5px solid var(--ink);color:var(--ink);
+  padding:14px 26px;border-radius:30px;font-weight:600;font-size:0.92rem;
+  transition:all .2s;
+}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);}
+
+/* ===== FOOTER / BRANCH STRIP ===== */
+.branch-strip{padding:6vh 6vw;border-top:1px solid var(--line);}
+.branch-strip h3{font-size:1rem;color:var(--ink-soft);margin-bottom:20px;font-weight:600;}
+.branch-icons{display:flex;gap:12px;flex-wrap:wrap;}
+.branch-chip{
+  display:flex;align-items:center;gap:10px;
+  background:var(--paper);border:1px solid var(--line);border-radius:30px;
+  padding:12px 18px;color:var(--ink-soft);font-size:0.85rem;font-weight:500;
+  transition:all .2s;
+}
+.branch-chip:hover{border-color:var(--ink);color:var(--ink);}
+.branch-chip.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 6vw;
+  display:flex;justify-content:space-between;align-items:center;
+  color:var(--ink-soft);font-size:0.8rem;flex-wrap:wrap;gap:10px;
+}
+
+@media(max-width:700px){
+  nav ul{gap:2px;}
+  header{padding:14px 5vw;}
+}
+
+</style>
+<style>
+  .subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+  .subject-card{border:1px solid var(--line);border-radius:18px;background:var(--paper);overflow:hidden;}
+  .subject-strip{height:8px;}
+  .s-math{background:var(--coral);}
+  .s-phy{background:var(--lavender);}
+  .s-eng{background:var(--sage);}
+  .s-c{background:var(--mustard);}
+  .subject-top{padding:20px 22px 14px;}
+  .subject-code{font-size:0.7rem;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.04em;}
+  .subject-card h3{font-size:1.15rem;margin:8px 0 6px;}
+  .subject-card .desc{color:var(--ink-soft);font-size:0.85rem;}
+
+  .tier-tabs{display:flex;border-top:1px solid var(--line);}
+  .tier-tab{flex:1;padding:11px;text-align:center;font-size:0.8rem;font-weight:600;color:var(--ink-soft);background:transparent;border:none;border-right:1px solid var(--line);}
+  .tier-tab:last-child{border-right:none;}
+  .tier-tab.active{color:var(--ink);background:var(--cream);}
+
+  .tier-panel{display:none;padding:18px 22px 22px;}
+  .tier-panel.active{display:flex;flex-direction:column;gap:10px;}
+  .resource-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-size:0.85rem;background:var(--cream);
+  }
+  .resource-row .dl{color:var(--paper);background:var(--ink);font-size:0.76rem;padding:6px 12px;border-radius:20px;font-weight:600;}
+  .resource-row.locked .dl{background:var(--coral);}
+  .resource-row.locked .locked-tag{background:transparent;color:var(--ink-soft);border:1px solid var(--line);font-weight:500;}
+  .unlock-row{border-top:1px dashed var(--line);margin-top:4px;padding-top:14px;}
+  .unlock-row span{font-weight:600;}
+  .unlock-row .unlock-price{background:var(--coral);}
+  .premium-note{font-size:0.76rem;color:var(--ink-soft);margin-top:2px;}
+  .premium-cta a{font-size:0.82rem;color:var(--coral);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="logo-mark"></span> GTU Sem-1 Hub</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sem1.html" class="current">Sem 1</a></li>
+      <li><a href="sem2.html">Sem 2</a></li>
+      <li><a href="pricing.html">Premium</a></li>
+    </ul>
+  </nav>
+  <a href="pricing.html" class="nav-cta">Premium bundles</a>
+</header>
+
+<section>
+  <div class="section-head">
+    <span class="section-tag mono">COMPUTER ENGINEERING — SEMESTER 1</span>
+    <h1>Sem 1 subjects</h1>
+    <p>Syllabus and past papers are free on every subject. Tap "Premium" on any card to see what's in the paid bundle.</p>
+  </div>
+
+  <div class="subject-grid">
+
+    <div class="subject-card">
+      <div class="subject-strip s-math"></div>
+      <div class="subject-top">
+        <span class="subject-code">MA101</span>
+        <h3>Engineering Mathematics</h3>
+        <p class="desc">Calculus, linear algebra and the core problem-solving patterns for Sem 1.</p>
+      </div>
+      <div class="tier-tabs">
+        <button class="tier-tab active" data-tier="free">Free</button>
+        <button class="tier-tab" data-tier="premium">Premium</button>
+      </div>
+      <div class="tier-panel active" data-panel="free">
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+      </div>
+      <div class="tier-panel" data-panel="premium">
+        <div class="resource-row locked"><span>Solved IMP Questions</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Solved Past Papers</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Topic-wise YouTube Links</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row unlock-row"><span>Unlock all 3 for this subject</span><a href="pricing.html" class="dl unlock-price">₹39</a></div>
+        <p class="premium-note">Or get all Sem 1 subjects together — cheaper per subject.</p>
+        <div class="premium-cta"><a href="pricing.html">See bundle pricing →</a></div>
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <div class="subject-strip s-phy"></div>
+      <div class="subject-top">
+        <span class="subject-code">PH101</span>
+        <h3>Engineering Physics</h3>
+        <p class="desc">Core mechanics, waves and electromagnetism with lab-relevant numericals.</p>
+      </div>
+      <div class="tier-tabs">
+        <button class="tier-tab active" data-tier="free">Free</button>
+        <button class="tier-tab" data-tier="premium">Premium</button>
+      </div>
+      <div class="tier-panel active" data-panel="free">
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+      </div>
+      <div class="tier-panel" data-panel="premium">
+        <div class="resource-row locked"><span>Solved IMP Questions</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Solved Past Papers</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Topic-wise YouTube Links</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row unlock-row"><span>Unlock all 3 for this subject</span><a href="pricing.html" class="dl unlock-price">₹39</a></div>
+        <p class="premium-note">Or get all Sem 1 subjects together — cheaper per subject.</p>
+        <div class="premium-cta"><a href="pricing.html">See bundle pricing →</a></div>
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <div class="subject-strip s-eng"></div>
+      <div class="subject-top">
+        <span class="subject-code">HS101</span>
+        <h3>English &amp; Communication</h3>
+        <p class="desc">Technical writing, reports and presentation skills.</p>
+      </div>
+      <div class="tier-tabs">
+        <button class="tier-tab active" data-tier="free">Free</button>
+        <button class="tier-tab" data-tier="premium">Premium</button>
+      </div>
+      <div class="tier-panel active" data-panel="free">
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+      </div>
+      <div class="tier-panel" data-panel="premium">
+        <div class="resource-row locked"><span>Solved IMP Questions</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Solved Past Papers</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Topic-wise YouTube Links</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row unlock-row"><span>Unlock all 3 for this subject</span><a href="pricing.html" class="dl unlock-price">₹39</a></div>
+        <p class="premium-note">Or get all Sem 1 subjects together — cheaper per subject.</p>
+        <div class="premium-cta"><a href="pricing.html">See bundle pricing →</a></div>
+      </div>
+    </div>
+
+    <div class="subject-card">
+      <div class="subject-strip s-c"></div>
+      <div class="subject-top">
+        <span class="subject-code">CS101</span>
+        <h3>C Programming</h3>
+        <p class="desc">From "hello world" to pointers and functions, for absolute beginners.</p>
+      </div>
+      <div class="tier-tabs">
+        <button class="tier-tab active" data-tier="free">Free</button>
+        <button class="tier-tab" data-tier="premium">Premium</button>
+      </div>
+      <div class="tier-panel active" data-panel="free">
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+      </div>
+      <div class="tier-panel" data-panel="premium">
+        <div class="resource-row locked"><span>Solved IMP Questions</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Solved Past Papers</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row locked"><span>Topic-wise YouTube Links</span><span class="dl locked-tag">Premium</span></div>
+        <div class="resource-row unlock-row"><span>Unlock all 3 for this subject</span><a href="pricing.html" class="dl unlock-price">₹39</a></div>
+        <p class="premium-note">Or get all Sem 1 subjects together — cheaper per subject.</p>
+        <div class="premium-cta"><a href="pricing.html">See bundle pricing →</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <span>GTU Diploma Sem-1 Hub</span>
+  <span class="mono">v0.3 · light theme</span>
+</footer>
+
+<script>
+  document.querySelectorAll('.subject-card').forEach(card=>{
+    const tabs = card.querySelectorAll('.tier-tab');
+    tabs.forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        tabs.forEach(t=>t.classList.remove('active'));
+        card.querySelectorAll('.tier-panel').forEach(p=>p.classList.remove('active'));
+        tab.classList.add('active');
+        card.querySelector('[data-panel="'+tab.dataset.tier+'"]').classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
