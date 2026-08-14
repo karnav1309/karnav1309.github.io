@@ -135,6 +135,14 @@ footer{
   .resource-row.locked .dl{background:var(--coral);}
   .resource-row.locked .locked-tag{background:transparent;color:var(--ink-soft);border:1px solid var(--line);font-weight:500;}
   .unlock-row{border-top:1px dashed var(--line);margin-top:4px;padding-top:14px;}
+  .papers-drop{border-bottom:1px solid var(--line);}
+  .papers-drop summary{list-style:none;cursor:pointer;}
+  .papers-drop summary::-webkit-details-marker{display:none;}
+  .arrow-btn{display:inline-block;transition:transform 0.15s;}
+  .papers-drop[open] .arrow-btn{transform:rotate(180deg);}
+  .papers-list{padding:2px 0 10px 12px;}
+  .paper-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:0.85rem;color:var(--ink-soft);}
+  .dl-sm{color:var(--paper);background:var(--ink);font-size:0.72rem;padding:5px 10px;border-radius:16px;font-weight:600;text-decoration:none;}
   .unlock-row span{font-weight:600;}
   .unlock-row .unlock-price{background:var(--coral);}
   .premium-note{font-size:0.76rem;color:var(--ink-soft);margin-top:2px;}
@@ -177,8 +185,15 @@ footer{
         <button class="tier-tab" data-tier="premium">Premium</button>
       </div>
       <div class="tier-panel active" data-panel="free">
-        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
-        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="Mathematics-1-syllabus.pdf" class="dl">Download</a></div>
+        <details class="papers-drop">
+          <summary class="resource-row"><span>Past Exam Papers</span><span class="dl arrow-btn">▼</span></summary>
+          <div class="papers-list">
+            <div class="paper-row"><span>Summer 2026</span><a href="math-paper-summer-2026.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Winter 2025</span><a href="math-paper-winter-2025.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Summer 2025</span><a href="math-paper-summer-2025.pdf" class="dl-sm">Download</a></div>
+          </div>
+        </details>
         <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="#" class="dl">Download</a></div>
       </div>
       <div class="tier-panel" data-panel="premium">
@@ -203,8 +218,15 @@ footer{
         <button class="tier-tab" data-tier="premium">Premium</button>
       </div>
       <div class="tier-panel active" data-panel="free">
-        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
-        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="Physics-syllabus.pdf" class="dl">Download</a></div>
+        <details class="papers-drop">
+          <summary class="resource-row"><span>Past Exam Papers</span><span class="dl arrow-btn">▼</span></summary>
+          <div class="papers-list">
+            <div class="paper-row"><span>Summer 2025</span><a href="physics-paper-summer-2025.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Winter 2025</span><a href="physics-paper-winter-2025.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Winter 2024</span><a href="physics-paper-winter-2024.pdf" class="dl-sm">Download</a></div>
+          </div>
+        </details>
         <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="#" class="dl">Download</a></div>
       </div>
       <div class="tier-panel" data-panel="premium">
@@ -229,8 +251,14 @@ footer{
         <button class="tier-tab" data-tier="premium">Premium</button>
       </div>
       <div class="tier-panel active" data-panel="free">
-        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
-        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="English-syllabus.pdf" class="dl">Download</a></div>
+        <details class="papers-drop">
+          <summary class="resource-row"><span>Past Exam Papers</span><span class="dl arrow-btn">▼</span></summary>
+          <div class="papers-list">
+            <div class="paper-row"><span>Summer 2026</span><a href="english-paper-summer-2026.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Winter 2025</span><a href="english-paper-winter-2025.pdf" class="dl-sm">Download</a></div>
+          </div>
+        </details>
         <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="#" class="dl">Download</a></div>
       </div>
       <div class="tier-panel" data-panel="premium">
@@ -255,8 +283,15 @@ footer{
         <button class="tier-tab" data-tier="premium">Premium</button>
       </div>
       <div class="tier-panel active" data-panel="free">
-        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
-        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="CPF-syllabus.pdf" class="dl">Download</a></div>
+        <details class="papers-drop">
+          <summary class="resource-row"><span>Past Exam Papers</span><span class="dl arrow-btn">▼</span></summary>
+          <div class="papers-list">
+            <div class="paper-row"><span>Summer 2025</span><a href="cpf-paper-summer-2025.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Winter 2025</span><a href="cpf-paper-winter-2025.pdf" class="dl-sm">Download</a></div>
+            <div class="paper-row"><span>Winter 2024</span><a href="cpf-paper-winter-2024.pdf" class="dl-sm">Download</a></div>
+          </div>
+        </details>
         <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="#" class="dl">Download</a></div>
       </div>
       <div class="tier-panel" data-panel="premium">
@@ -281,8 +316,13 @@ footer{
         <button class="tier-tab" data-tier="premium">Premium</button>
       </div>
       <div class="tier-panel active" data-panel="free">
-        <div class="resource-row"><span>Syllabus (PDF)</span><a href="#" class="dl">Download</a></div>
-        <div class="resource-row"><span>Past Exam Papers</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>Syllabus (PDF)</span><a href="BE-syllabus.pdf" class="dl">Download</a></div>
+        <details class="papers-drop">
+          <summary class="resource-row"><span>Past Exam Papers</span><span class="dl arrow-btn">▼</span></summary>
+          <div class="papers-list">
+            <div class="paper-row"><span>Winter 2025</span><a href="BE-paper-winter-2025.pdf" class="dl-sm">Download</a></div>
+          </div>
+        </details>
         <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="#" class="dl">Download</a></div>
       </div>
       <div class="tier-panel" data-panel="premium">
