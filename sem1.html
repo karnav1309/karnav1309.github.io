@@ -136,8 +136,9 @@ footer{
   .resource-row.locked .locked-tag{background:transparent;color:var(--ink-soft);border:1px solid var(--line);font-weight:500;}
   .unlock-row{border-top:1px dashed var(--line);margin-top:4px;padding-top:14px;}
   .papers-drop{border-bottom:1px solid var(--line);}
-  .papers-drop summary{list-style:none;cursor:pointer;}
+  .papers-drop summary{list-style:none;cursor:pointer;background:var(--cream)!important;border:1px solid var(--line)!important;border-radius:10px!important;padding:11px 14px!important;display:flex!important;justify-content:space-between;align-items:center;}
   .papers-drop summary::-webkit-details-marker{display:none;}
+  .papers-drop summary::marker{display:none;content:'';}
   .arrow-btn{display:inline-block;transition:transform 0.15s;}
   .papers-drop[open] .arrow-btn{transform:rotate(180deg);}
   .papers-list{padding:2px 0 10px 12px;}
@@ -194,7 +195,7 @@ footer{
             <div class="paper-row"><span>Summer 2025</span><a href="math-paper-summer-2025.pdf" class="dl-sm">Download</a></div>
           </div>
         </details>
-        <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="#" class="dl">Download</a></div>
+        <div class="resource-row"><span>IMP Questions (unsolved)</span><a href="Math_imp-quetions.pdf" class="dl">Download</a></div>
       </div>
       <div class="tier-panel" data-panel="premium">
         <div class="resource-row locked"><span>Solved IMP Questions (with answers)</span><span class="dl locked-tag">Premium</span></div>
